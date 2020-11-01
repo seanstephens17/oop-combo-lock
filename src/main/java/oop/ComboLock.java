@@ -13,48 +13,39 @@ public class ComboLock {
 
     // Instance variables (fields)
     // Code combination required to open this lock
-    int digit1;
-    int digit2;
-    int digit3;
 
-    private LockStateEnum LockStateEnum;    // current state of the ComboLock
+    //TODO - create instance fields to store three code digits required to open lock
 
     // constructor
     // initialize/set the correct combination code for the lock
-    public ComboLock(int digit1, int digit2, int digit3) {
-        this.digit1 = digit1;
-        this.digit2 = digit2;
-        this.digit3 = digit3;
-        this.LockStateEnum = LockStateEnum.NONE_CORRECT;
-    }
+    //TODO - constructor to initialize lock
 
     public void reset() {
-        this.LockStateEnum = LockStateEnum.NONE_CORRECT;
+        //TODO reset the lock to start state
     }
 
     public void turnRight(int number) {
-        if (LockStateEnum == LockStateEnum.NONE_CORRECT && digit1 == number)
-            LockStateEnum = LockStateEnum.FIRST_CORRECT;
-
-        if (LockStateEnum == LockStateEnum.SECOND_CORRECT && digit3 == number)
-            LockStateEnum = LockStateEnum.ALL_THREE_CORRECT;
+        //TODO how will turning right to the number
+        // change the state of the lock?
     }
 
     public void turnLeft(int number) {
-
-        if (LockStateEnum == LockStateEnum.FIRST_CORRECT && digit2 == number)
-            LockStateEnum = LockStateEnum.SECOND_CORRECT;
+        //TODO how will turning right to the number
+        // change the state of the lock?
     }
 
     public boolean open() {
-        if (LockStateEnum == LockStateEnum.ALL_THREE_CORRECT)
-            return true;
-        else
-            return false;
+        //TODO logic for testing if lock is open
+        /*if (   ???  )
+                return true;
+
+        */
+
+        return false;
     }
 
     //TODO
     // Consider - can a user open this lock by entering the right sequence of
-    // codes but with some incorrect ones in between the corect ones.
+    // codes but with some incorrect ones in between the correct ones.
     // How might this be resolved?
 }

@@ -2,7 +2,7 @@ package oop;
 
 // Enumeration class
 
-public enum LockStateEnum { NONE_CORRECT, FIRST_CORRECT, SECOND_CORRECT, ALL_THREE_CORRECT };
-
+//TODO - consider enumeration to represent lock state
+// enum will make code more readable and less error prone
 
 
